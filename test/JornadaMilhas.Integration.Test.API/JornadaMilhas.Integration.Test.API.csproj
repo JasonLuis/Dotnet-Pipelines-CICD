@@ -26,4 +26,19 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="anotacao-curso-cicd\Aula-01-Item-07-ExecutandoAPipeline.md">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Aula-01-Item-07-ExecutandoAPipeline.cs</LastGenOutput>
+    </None>
+    <None Update="anotacao-curso-cicd\Aula-01-Item-08-ParaSaberMais-GithubActions.md">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Aula-01-Item-08-ParaSaberMais-GithubActions.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
 </Project>
