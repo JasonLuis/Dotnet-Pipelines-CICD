@@ -14,6 +14,7 @@
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.10" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Testcontainers.MsSql" Version="4.0.0" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
   </ItemGroup>
@@ -31,9 +32,17 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Aula-01-Item-07-ExecutandoAPipeline.cs</LastGenOutput>
     </None>
-    <None Update="anotacao-curso-cicd\Aula-01-Item-08-ParaSaberMais-GithubActions.md">
-      <Generator>TextTemplatingFileGenerator</Generator>
+    <None Update="anotacao-curso-cicd\Aula-01-Item-08-ParaSaberMais-GithubActions - Cópia.md">
       <LastGenOutput>Aula-01-Item-08-ParaSaberMais-GithubActions.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="anotacao-curso-cicd\Aula-02-Item-01-ProjetoAulaAnterior - Cópia.md">
+      <LastGenOutput>Aula-02-Item-01-ProjetoAulaAnterior.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="anotacao-curso-cicd\Aula-02-Item-02-InstalacaoDoTestContainer.md">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Aula-02-Item-02-InstalacaoDoTestContainer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
