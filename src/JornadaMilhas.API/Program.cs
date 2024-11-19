@@ -18,7 +18,8 @@ builder.Services.AddAuthorization();
 builder.Services.AddDbContext<JornadaMilhasContext>((options) => {
     options
         .UseLazyLoadingProxies()
-        .UseSqlServer(builder.Configuration["ConnectionString:DefaultConnection"]);
+        .UseSqlServer(builder.Configuration["ConnectionString:AzureConnection"]);
+        //.UseSqlServer(builder.Configuration["ConnectionString:DefaultConnection"]);
 });
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>()
