@@ -1,0 +1,1 @@
+﻿Caso queira conferir o projeto finalizado ou comparar com os códigos que você escreveu no seu projeto, você pode acessar o [repositório com o projeto final do curso](https://github.com/alura-cursos/JornadaMilhas-CICD/tree/aula05-video5.2).
