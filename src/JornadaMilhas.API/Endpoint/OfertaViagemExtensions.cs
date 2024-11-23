@@ -78,5 +78,12 @@ public static class OfertaViagemExtensions
             if (oferta is null) return Results.NotFound();
             return Results.Ok(converter.EntityToResponse(oferta));
         }).WithTags("Oferta Viagem").WithSummary("Obtem oferta de viagem com maior desconto.").WithOpenApi().RequireAuthorization();
+
+        app.MapGet("/ofertas-viagem/ultima-oferta", async ([FromServices] OfertaViagemConverter converter, [FromServices] EntityDAL<OfertaViagem> entityDAL) =>
+        {
+            var oferta = await entityDAL.UltimoRegistroAsync();
+            if (oferta is null) return Results.NotFound();
+            return Results.Ok(converter.EntityToResponse(oferta));
+        }).WithTags("Oferta Viagem").WithSummary("Obtem última oferta de viagem cadastrada.").WithOpenApi().RequireAuthorization();
     }
 }

@@ -160,4 +160,30 @@ public class OfertaViagem_GET: IClassFixture<JornadaMilhasWebApplicationFactory>
         //Assert
         Assert.NotNull(response);
     }
+
+    [Fact]
+    public async Task Recuperar_Ultima_OfertaViagem_Cadastrada()
+    {
+        //Arrange  
+        var ofertaExistente = app.Context.OfertasViagem.FirstOrDefault();
+        if (ofertaExistente is null)
+        {
+            ofertaExistente = new OfertaViagem()
+            {
+                Preco = 100,
+                Rota = new Rota("Origem", "Destino"),
+                Periodo = new Periodo(DateTime.Parse("2024-03-03"), DateTime.Parse("2024-03-06"))
+            };
+            app.Context.Add(ofertaExistente);
+            app.Context.SaveChanges();
+        }
+
+        using var client = await app.GetClientWithAccessTokenAsync();
+
+        //Act
+        var response = await client.GetFromJsonAsync<OfertaViagem>("/ofertas-viagem/ultima-oferta");
+
+        //Assert
+        Assert.NotNull(response);
+    }
 }
